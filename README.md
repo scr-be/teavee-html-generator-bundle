@@ -1,0 +1,19 @@
+# Teavee HTML Component Generator Bundle
+
+[![Travis](https://scr.be/teavee-html-component-generator-bundle/travis_shield)](https://scr.be/teavee-html-component-generator-bundle/travis)
+[![Codacy](https://scr.be/teavee-html-component-generator-bundle/codacy_shield)](https://scr.be/teavee-html-component-generator-bundle/codacy)
+[![Coveralls](https://scr.be/teavee-html-component-generator-bundle/coveralls_shield)](https://scr.be/teavee-html-component-generator-bundle/coveralls)
+[![Gemnasium](https://scr.be/teavee-html-component-generator-bundle/gemnasium_shield)](https://scr.be/teavee-html-component-generator-bundle/gemnasium)
+
+The `scr-be/teavee-html-component-generator-bundle` project provides a collection of objects and interfaces to simplify Symfony
+bundle operations, such as configuring an extension or implementing a compiler pass.
+
+## License, Reference, and Release
+
+[![License](https://scr.be/teavee-html-component-generator-bundle/license_shield)](https://scr.be/teavee-html-component-generator-bundle/license)
+[![README](https://scr.be/teavee-html-component-generator-bundle/readme_shield)](https://scr.be/teavee-html-component-generator-bundle/readme)
+[![API](https://scr.be/teavee-html-component-generator-bundle/api_shield)](https://scr.be/teavee-html-component-generator-bundle/api)
+[![Packagist](https://scr.be/teavee-html-component-generator-bundle/packagist_shield)](https://scr.be/teavee-html-component-generator-bundle/packagist)
+
+This project is licensed under the [MIT License](https://github.com/scr-be/teavee-html-component-generator-bundle/blob/master/LICENSE.md).
+API Reference docs and our latest release are available via the above badges.

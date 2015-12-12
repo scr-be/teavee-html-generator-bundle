@@ -13,6 +13,9 @@ env  : { global: [ { scribe_packaged: .scribe-package.yml } ] }
 services : [ memcached, mysql ]
 addons   : { apt: { packages: [ libyaml-dev ] } }
 
+before_script:
+  - git clone https://github.com/scr-be/build-knowledge-shared.git config
+
 install:
   - bash config/builders/build-reqs/build-reqs.bash up-php
   - composer install -n || composer update -n

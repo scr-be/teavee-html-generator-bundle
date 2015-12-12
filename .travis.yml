@@ -10,10 +10,11 @@ sudo : false
 git  : { depth: 3 }
 env  : { global: [ { scribe_packaged: .scribe-package.yml } ] }
 
-services : [ memcached, mysql ]
-addons   : { apt: { packages: [ libyaml-dev ] } }
+services:
+  - memcached
+  - mysql
 
-before_script:
+before_install:
   - git clone https://github.com/scr-be/build-knowledge-shared.git config
 
 install:

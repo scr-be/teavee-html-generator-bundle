@@ -6,10 +6,21 @@ php:
   - 5.6
   - 7.0
 
-sudo   : false
-addons : { apt : { packages : [ libmemcached-dev, libyaml-dev, coreutils ] } }
-git    : { depth: 3 }
-env    : { global: [ { scribe_packaged: .scribe-package.yml } ] }
+sudo : false
+
+git:
+  depth: 3
+
+env:
+  global:
+    - scribe_packaged: .scribe-package.yml
+
+addons:
+  apt:
+    packages:
+      - libmemcached-dev
+      - libyaml-dev
+      - coreutils
 
 services:
   - memcached

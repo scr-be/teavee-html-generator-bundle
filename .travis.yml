@@ -15,25 +15,11 @@ env:
   global:
     - scribe_packaged: .scribe-package.yml
 
-addons:
-  apt:
-    packages:
-      - libmemcached-dev
-      - libyaml-dev
-      - realpath
-
 services:
   - memcached
   - mysql
 
 before_install:
-  - which -a readlink || echo "NOT FOUND"
-  - readlink --verbose -m dir/does/not/exist || echo "NOT FOUND"
-  - readlink -f build/log || echo "NOT FOUND"
-  - readlink --version || echo "NOT FOUND"
-  - realpath --version || echo "NOT FOUND"
-  - realpath --help || echo "NOT HELP"
-  - readlink --help
   - git clone https://github.com/scr-be/build-knowledge-shared.git config
 
 install:

@@ -21,6 +21,7 @@ addons:
       - libmemcached-dev
       - libyaml-dev
       - coreutils
+      - realpath
 
 services:
   - memcached

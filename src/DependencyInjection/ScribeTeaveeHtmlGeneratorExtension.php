@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Teavee HTML Component Generator Bundle.
+ * This file is part of the Teavee HTML Generator Bundle.
  *
  * (c) Rob Frawley 2nd <rmf@build.fail>
  *
@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Scribe\Teavee\HtmlComponentGeneratorBundle\DependencyInjection;
+namespace Scribe\Teavee\HtmlGeneratorBundle\DependencyInjection;
 
 use Scribe\WonkaBundle\Component\DependencyInjection\AbstractExtension;
 
 /**
- * Class ScribeTeaveeHtmlComponentGeneratorExtension.
+ * Class ScribeTeaveeHtmlGeneratorExtension.
  */
-class ScribeTeaveeHtmlComponentGeneratorExtension extends AbstractExtension
+class ScribeTeaveeHtmlGeneratorExtension extends AbstractExtension
 {
 }
 

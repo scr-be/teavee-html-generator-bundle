@@ -4,6 +4,9 @@ api_cfgmod  : clone
 api_runner  : ~
 api_paths   : lib
 phpincs_req : timezone
-phpexts_req : igbinary
+phpexts_req : igbinary,memcached
 syspkgs_req : ~
 ci_send_req : coveralls,codacycoverage
+symf_up_req : db-create,db-load
+symf_dn_req : db-unload
+symfcmd_bin : bin/teavee-html-component-generator

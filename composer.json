@@ -1,17 +1,17 @@
 {
-    "name"        : "scr-be/teavee-html-component-generator-bundle",
+    "name"        : "scr-be/teavee-html-generator-bundle",
     "license"     : "MIT",
     "type"        : "project",
-    "homepage"    : "https://scr.be/teavee-html-component-generator-bundle",
-    "description" : "A collection of objects/interfaces to simplify bundle setup, such as advanced bundle configuration, compiler passes, and deprecaton error handlers.",
+    "homepage"    : "https://scr.be/teavee-html-generator-bundle",
+    "description" : "A framework for creating HTML components-buttons, icons, etc-with support for API-based calls or twig extensions.",
     "support" : {
         "email"  : "rmf@scr.be",
-        "issues" : "https://scr.be/teavee-html-component-generator-bundle/issues",
-        "source" : "https://scr.be/teavee-html-component-generator-bundle/git",
+        "issues" : "https://scr.be/teavee-html-generator-bundle/issues",
+        "source" : "https://scr.be/teavee-html-generator-bundle/git",
         "irc"    : "irc://irc.efnet.org/scribe"
     },
     "keywords"   : [
-        "teavee-html-component-generator-bundle", "scribe-teavee-html-component-generator-bundle", "bundle", "scr.be"
+        "teavee-html-generator-bundle", "scribe-teavee-html-generator-bundle", "bundle", "scr.be"
     ],
     "authors"    : [
         {
@@ -22,36 +22,39 @@
         }
     ],
     "require" : {
-        "php"                          : ">=5.6.4,~5.6|~7.0",
-        "scr-be/wonka-bundle"          : "~0.2",
-        "scr-be/wonka-library"         : "~0.1",
-        "symfony/config"               : "~2.8|~3.0",
-        "symfony/dependency-injection" : "~2.8|~3.0",
-        "symfony/http-foundation"      : "~2.8|~3.0",
-        "twig/twig"                    : "~1.23"
+        "php"                                     : ">=5.6.4,~5.6|~7.0",
+        "scr-be/wonka-bundle"                     : "~0.2",
+        "scr-be/cache-bundle"                     : "~2.2",
+        "scr-be/arthur-doctrine-library"          : "~0.1",
+        "scr-be/arthur-doctrine-fixtures-library" : "~0.1",
+        "symfony/config"                          : "~2.8|~3.0",
+        "symfony/dependency-injection"            : "~2.8|~3.0",
+        "symfony/http-foundation"                 : "~2.8|~3.0",
+        "symfony/twig-bundle"                     : "~2.8|~3.0",
+        "twig/twig"                               : "~1.23"
     },
     "require-dev" : {
-        "twig/twig"                : "~1.23",
-        "symfony/symfony"          : "~2.8|~3.0",
-        "symfony/stopwatch"        : "~2.8|~3.0",
-        "symfony/framework-bundle" : "~2.8|~3.0",
-        "symfony/debug-bundle"     : "~2.8|~3.0",
-        "symfony/monolog-bundle"   : "~2.8|~3.0",
-        "symfony/phpunit-bridge"   : "~2.8|~3.0",
-        "phpunit/phpunit"          : "~5.0",
-        "codacy/coverage"          : "~1.0",
-        "satooshi/php-coveralls"   : "~0.7"
+        "doctrine/doctrine-fixtures-bundle" : "~2.2",
+        "symfony/symfony"                   : "~2.8|~3.0",
+        "symfony/stopwatch"                 : "~2.8|~3.0",
+        "symfony/framework-bundle"          : "~2.8|~3.0",
+        "symfony/debug-bundle"              : "~2.8|~3.0",
+        "symfony/monolog-bundle"            : "~2.8|~3.0",
+        "symfony/phpunit-bridge"            : "~2.8|~3.0",
+        "phpunit/phpunit"                   : "~5.0",
+        "codacy/coverage"                   : "~1.0",
+        "satooshi/php-coveralls"            : "~0.7"
     },
     "conflict" : {
         "scribe/mantle-bundle" : "<2.3.0"
     },
     "autoload" : {
         "psr-4" : {
-            "Scribe\\Teavee\\HtmlComponentGeneratorBundle" : "src/"
+            "Scribe\\Teavee\\HtmlGeneratorBundle\\" : "src/"
         }
     },
     "autoload-dev" : {
-        "psr-4" : { "Scribe\\Teavee\\HtmlComponentGeneratorBundle\\Tests\\" : "tests/" }
+        "psr-4" : { "Scribe\\Teavee\\HtmlGeneratorBundle\\Tests\\" : "tests/" }
     },
     "minimum-stability" : "dev",
     "prefer-stable"     : true,

@@ -1,0 +1,45 @@
+<?php
+
+/*
+ * This file is part of the scr-be/teavee-html-generator-bundle
+ *
+ * (c) Rob Frawley 2nd <rmf@build.fail>
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
+namespace Scribe\Teavee\HtmlGeneratorBundle\Component\DependencyInjection\Aware;
+
+/**
+ * Trait TwigEngineAwareTrait.
+ */
+trait TwigEnvironmentAwareTrait
+{
+    /**
+     * @var \Twig_Environment
+     */
+    protected $twigEnvironment;
+
+    /**
+     * @param \Twig_Environment|null $engineEnvironment
+     *
+     * @return $this
+     */
+    public function setTwigEnvironment(\Twig_Environment $engineEnvironment = null)
+    {
+        $this->twigEnvironment = $engineEnvironment;
+
+        return $this;
+    }
+
+    /**
+     * @return \Twig_Environment|null
+     */
+    protected function getTwigEnvironment()
+    {
+        return $this->twigEnvironment;
+    }
+}
+
+/* EOF */

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Teavee HTML Component Generator Bundle.
+ * This file is part of the Teavee HTML Generator Bundle.
  *
  * (c) Rob Frawley 2nd <rmf@build.fail>
  *
@@ -23,7 +23,11 @@ class AppKernel extends \Scribe\WonkaBundle\Component\HttpKernel\Kernel
             ->addBundle('\Symfony\Bundle\MonologBundle\MonologBundle')
             ->addBundle('\Symfony\Bundle\FrameworkBundle\FrameworkBundle')
             ->addBundle('\Symfony\Bundle\SecurityBundle\SecurityBundle')
+            ->addBundle('\Symfony\Bundle\TwigBundle\TwigBundle')
+            ->addBundle('\Doctrine\Bundle\DoctrineBundle\DoctrineBundle')
             ->addBundle('\Scribe\WonkaBundle\ScribeWonkaBundle')
+            ->addBundle('\Scribe\CacheBundle\ScribeCacheBundle')
+            ->addBundle('\Scribe\Teavee\HtmlGeneratorBundle\ScribeTeaveeHtmlGeneratorBundle')
             ->addBundle('\Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle', 'dev', 'test')
             ->addBundle('\Symfony\Bundle\DebugBundle\DebugBundle', 'dev', 'test');
     }

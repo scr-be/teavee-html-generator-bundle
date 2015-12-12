@@ -1,0 +1,70 @@
+---
+
+Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\IconFamily :
+
+    type                 : entity
+    options              :
+        row_format       : DYNAMIC
+        charset          : utf8mb4
+        collate          : utf8mb4_unicode_ci
+    table                : Teavee_Icon_Family
+    changeTrackingPolicy : DEFERRED_EXPLICIT
+    readOnly             : true
+    repositoryClass      : Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Repository\IconFamilyRepository
+
+    id:
+
+        slug :
+            id     : true
+            type   : string
+            length : 64
+            generator :
+                strategy : NONE
+
+    fields :
+
+        name :
+            type   : string
+            length : 64
+
+        aliases :
+            type     : json_array
+            nullable : true
+
+        version :
+            type   : string
+            length : 64
+
+        url :
+            type   : string
+            length : 256
+
+        prefix :
+            type   : string
+            length : 10
+
+        requiredClasses :
+            type     : json_array
+            nullable : true
+
+        optionalClasses :
+            type     : json_array
+            nullable : true
+
+        attributes :
+            type     : json_array
+            nullable : true
+
+    oneToMany :
+
+        templates :
+            targetEntity : IconTemplate
+            mappedBy     : family
+            orderBy      :
+                priority : ASC
+
+        icons :
+            targetEntity : Icon
+            mappedBy     : family
+
+...

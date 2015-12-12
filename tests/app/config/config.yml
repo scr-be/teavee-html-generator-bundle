@@ -11,9 +11,22 @@
 
 imports:
     - { resource: ../../../config/testers/symfony/config/base.yml }
-    - { resource: ../../../config/testers/symfony/aconfig/framework.yml }
+    - { resource: ../../../config/testers/symfony/config/framework.yml }
     - { resource: ../../../config/testers/symfony/config/security.yml }
+    - { resource: ../../../config/testers/symfony/config/doctrine.yml }
 
-scribe_html_component_generator : ~
+doctrine :
+    orm :
+        entity_managers :
+            default :
+                mappings :
+                    ScribeTeaveeHtmlGeneratorBundle:
+                        type   : yml
+                        prefix : Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity
+                metadata_cache_driver : array
+                query_cache_driver    : array
+                result_cache_driver   : array
+
+scribe_teavee_html_generator : ~
 
 ...

@@ -8,6 +8,13 @@ php:
 
 sudo: false
 
+git:
+  depth: 3
+
+services:
+  - memcached
+  - mysql
+
 env:
   global:
     - scribe_packaged: .scribe-package.yml
@@ -24,13 +31,15 @@ before_install:
   - git clone https://github.com/scr-be/build-knowledge-shared.git config
 
 install:
-  - bash config/builders/build-reqs/build-reqs.bash up
+  - bash config/builders/build-reqs/build-reqs.bash up-php
   - composer install -n || composer update -n
+  - bash config/builders/build-reqs/build-reqs.bash up-app
 
 script:
   - bin/phpunit --verbose --configuration phpunit.xml.dist
 
 after_script:
-  - bash config/builders/build-reqs/build-reqs.bash down
+  - bash config/builders/build-reqs/build-reqs.bash dn-app
+  - bash config/builders/build-reqs/build-reqs.bash dn-php
 
 ...

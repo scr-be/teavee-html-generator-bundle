@@ -4,14 +4,14 @@
          backupStaticAttributes="false"
          colors="true"
          convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
+         convertNoticesToExceptions="false"
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="true"
          bootstrap="config/testers/bootstrap/phpunit.php">
     <testsuites>
-        <testsuite name="teavee-html-component-generator-bundle">
+        <testsuite name="teavee-html-generator-bundle">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
@@ -34,6 +34,12 @@
     </logging>
     <php>
         <server name="KERNEL_DIR" value="./tests/app" />
+        <server name="SYMFONY__DATABASE_DRIVER" value="pdo_mysql" />
+        <server name="SYMFONY__DATABASE_HOST" value="127.0.0.1" />
+        <server name="SYMFONY__DATABASE_PORT" value="3306" />
+        <server name="SYMFONY__DATABASE_NAME" value="Teavee_HtmlGeneratorBundle" />
+        <server name="SYMFONY__DATABASE_USER" value="root" />
+        <server name="SYMFONY__DATABASE_PASSWORD" value="" />
         <ini name="error_reporting" value="-1" />
         <ini name="intl.default_locale" value="en" />
         <ini name="intl.error_level" value="0" />

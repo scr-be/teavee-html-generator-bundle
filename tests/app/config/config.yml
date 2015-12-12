@@ -27,6 +27,17 @@ doctrine :
                 query_cache_driver    : array
                 result_cache_driver   : array
 
+scribe_cache :
+    method :
+        memcached :
+            options_list :
+                serializer : serializer_php
+            servers_list :
+                name :
+                    host   : 127.0.0.1
+                    port   : 11211
+                    weight : 0
+
 scribe_teavee_html_generator : ~
 
 ...

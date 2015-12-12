@@ -20,17 +20,14 @@ addons:
     packages:
       - libmemcached-dev
       - libyaml-dev
-      - coreutils
-      - realpath
 
 services:
   - memcached
   - mysql
 
 before_install:
-  - which -a realpath || echo "IDK"
-  - /usr/bin/realpath --version || echo "IDK"
-  - ls -lah /usr/bin || echo "IDK"
+  - which -a readlink | echo "NOT FOUND"
+  - readlink -m dir/does/not/exist | echo "NOT FOUND"
   - git clone https://github.com/scr-be/build-knowledge-shared.git config
 
 install:

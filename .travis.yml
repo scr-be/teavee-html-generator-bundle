@@ -27,6 +27,9 @@ services:
   - mysql
 
 before_install:
+  - which -a realpath
+  - /usr/bin/realpath --version
+  - ls -lah /usr/bin
   - git clone https://github.com/scr-be/build-knowledge-shared.git config
 
 install:

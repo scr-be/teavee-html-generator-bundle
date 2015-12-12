@@ -11,13 +11,11 @@
 
 namespace Scribe\Teavee\HtmlGeneratorBundle\Manager;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Scribe\CacheBundle\Component\Manager\CacheManagerInterface;
 use Scribe\CacheBundle\DependencyInjection\Aware\CacheManagerAwareTrait;
 use Scribe\Teavee\HtmlGeneratorBundle\Generator\GeneratorInterface;
 use Scribe\Teavee\HtmlGeneratorBundle\Provider\ProviderInterface;
 use Scribe\Wonka\Exception\RuntimeException;
-use Scribe\WonkaBundle\Component\DependencyInjection\Container\ServiceFinder;
 
 /**
  * Class AbstractManager.
@@ -180,7 +178,7 @@ abstract class AbstractManager implements ManagerInterface
             return $response;
         }
 
-        return null;
+        return;
     }
 
     /**
@@ -197,7 +195,7 @@ abstract class AbstractManager implements ManagerInterface
                 return false;
 
             case self::ERR_ST_NULL:
-                return null;
+                return;
         }
 
         throw new RuntimeException('Could not render requested component.', null, $e);

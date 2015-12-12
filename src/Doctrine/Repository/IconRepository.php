@@ -61,7 +61,7 @@ class IconRepository extends EntityRepository
             ->where('i.name = :name')
             ->setParameters([
                 'name' => $icon,
-                'family' => $family
+                'family' => $family,
             ])
             ->leftJoin('i.family', 'family')
             ->leftJoin('family.templates', 'templates')
@@ -117,7 +117,7 @@ class IconRepository extends EntityRepository
             ->where('i.unicode = :unicode')
             ->setParameters([
                 'unicode' => $icon,
-                'family' => $family
+                'family' => $family,
             ])
             ->leftJoin('i.family', 'family')
             ->leftJoin('family.templates', 'templates')

@@ -11,7 +11,6 @@
 
 namespace Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Scribe\Doctrine\ORM\Mapping\SlugEntity;
 
 /**

@@ -46,7 +46,6 @@ class IconProvider implements ProviderInterface
                 $this->parseSubject((string) $subject)
             );
         } catch (\Exception $e) {
-
             throw new RuntimeException('Provider failure for "%s" icon.', null, $e, (string) $subject);
         }
     }
@@ -107,7 +106,7 @@ class IconProvider implements ProviderInterface
      */
     protected function search(array $searches = [])
     {
-        for ($i = 0; $i < count($searches); $i++) {
+        for ($i = 0; $i < count($searches); ++$i) {
             if (false !== ($result = $this->attemptSearches(...$searches[$i]))) {
                 return $result;
             }

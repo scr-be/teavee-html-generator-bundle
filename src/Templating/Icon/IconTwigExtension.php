@@ -26,7 +26,7 @@ class IconTwigExtension extends AbstractTwigExtension
     {
         parent::__construct($manager);
 
-        $this->addFunction('icon', [ $this, 'renderIcon' ]);
+        $this->addFunction('icon', [$this, 'renderIcon']);
     }
 
     /**

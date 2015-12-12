@@ -11,8 +11,6 @@
 
 namespace Scribe\Teavee\HtmlGeneratorBundle\Generator;
 
-use Scribe\Wonka\Exception\ExceptionInterface;
-
 /**
  * Interface GeneratorInterface.
  */

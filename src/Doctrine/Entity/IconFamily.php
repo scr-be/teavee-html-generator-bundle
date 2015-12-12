@@ -13,7 +13,6 @@ namespace Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Scribe\Doctrine\ORM\Mapping\SlugEntity;
-use Scribe\Wonka\Exception\ExceptionInterface;
 
 /**
  * Class IconFamily.

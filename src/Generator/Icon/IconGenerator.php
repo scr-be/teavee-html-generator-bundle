@@ -121,7 +121,7 @@ class IconGenerator extends AbstractTwigGenerator implements GeneratorInterface
      */
     protected function parseOptionsValue(array $ops = [], $index)
     {
-        $filtered = call_user_func([$this, 'filterOption' . ucfirst($index)], $ops[$index]);
+        $filtered = call_user_func([$this, 'filterOption'.ucfirst($index)], $ops[$index]);
         unset($ops[$index]);
 
         return $filtered;
@@ -165,7 +165,7 @@ class IconGenerator extends AbstractTwigGenerator implements GeneratorInterface
     protected function filterOptionAriaLabel($label)
     {
         if (!is_string($label) || strlen($label) === 0) {
-            return null;
+            return;
         }
 
         return $label;

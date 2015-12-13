@@ -29,7 +29,7 @@ class IconRepository extends EntityRepository
      */
     public function findOneBySlugAsArray($icon)
     {
-        $q = $this
+        $query = $this
             ->createQueryBuilder('i')
             ->where('i.slug = :slug')
             ->setParameter('slug', $icon)
@@ -40,7 +40,7 @@ class IconRepository extends EntityRepository
             ->getQuery();
 
         try {
-            return $q->getSingleResult(Query::HYDRATE_ARRAY);
+            return $query->getSingleResult(Query::HYDRATE_ARRAY);
         } catch (\Exception $e) {
             throw new ORMException('Icon repository query failed for "%s" icon.', null, $e, $icon);
         }
@@ -56,7 +56,7 @@ class IconRepository extends EntityRepository
      */
     public function findOneByNameAndFamilyAsArray($icon, $family)
     {
-        $q = $this
+        $query = $this
             ->createQueryBuilder('i')
             ->where('i.name = :name')
             ->setParameters([
@@ -71,7 +71,7 @@ class IconRepository extends EntityRepository
             ->getQuery();
 
         try {
-            return $q->getSingleResult(Query::HYDRATE_ARRAY);
+            return $query->getSingleResult(Query::HYDRATE_ARRAY);
         } catch (\Exception $e) {
             throw new ORMException('Icon repository query failed for "%s" icon.', null, $e, $icon);
         }
@@ -86,7 +86,7 @@ class IconRepository extends EntityRepository
      */
     public function findOneByUnicodeAsArray($icon)
     {
-        $q = $this
+        $query = $this
             ->createQueryBuilder('i')
             ->where('i.unicode = :unicode')
             ->setParameter('unicode', $icon)
@@ -97,7 +97,7 @@ class IconRepository extends EntityRepository
             ->getQuery();
 
         try {
-            return $q->getSingleResult(Query::HYDRATE_ARRAY);
+            return $query->getSingleResult(Query::HYDRATE_ARRAY);
         } catch (\Exception $e) {
             throw new ORMException('Icon repository query failed for "%s" icon.', null, $e, $icon);
         }
@@ -112,7 +112,7 @@ class IconRepository extends EntityRepository
      */
     public function findOneByUnicodeAndFamilyAsArray($icon, $family)
     {
-        $q = $this
+        $query = $this
             ->createQueryBuilder('i')
             ->where('i.unicode = :unicode')
             ->setParameters([
@@ -127,7 +127,7 @@ class IconRepository extends EntityRepository
             ->getQuery();
 
         try {
-            return $q->getSingleResult(Query::HYDRATE_ARRAY);
+            return $query->getSingleResult(Query::HYDRATE_ARRAY);
         } catch (\Exception $e) {
             throw new ORMException('Icon repository query failed for "%s" icon.', null, $e, $icon);
         }

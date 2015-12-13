@@ -105,7 +105,7 @@ class IconGenerator extends AbstractTwigGenerator implements GeneratorInterface
         $options = [];
 
         foreach (['classes', 'ariaRole', 'ariaLabel', 'ariaHidden'] as $o) {
-            $options[] = isset($ops[$o]) ? $this->parseOptionsValue($ops, $o) : $this->{$o};
+            $options[] = isset($ops[$o]) ? $this->parseOptionsValue($o, $ops) : $this->{$o};
         }
 
         $options[] = $ops;
@@ -119,7 +119,7 @@ class IconGenerator extends AbstractTwigGenerator implements GeneratorInterface
      *
      * @return mixed
      */
-    protected function parseOptionsValue(array $ops = [], $index)
+    protected function parseOptionsValue($index, array $ops = [])
     {
         $filtered = call_user_func([$this, 'filterOption'.ucfirst($index)], $ops[$index]);
         unset($ops[$index]);

@@ -14,12 +14,16 @@ matrix :
   allow_failures :
     - php : hhvm
 
+git :
+  depth : 3
+
 env :
   global :
     - build_package : true
 
-git :
-  depth : 3
+services :
+  - memcached
+  - mysql
 
 before_install :
   - git clone --depth=1 --branch=master https://github.com/scr-be/build-knowledge-shared.git config

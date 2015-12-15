@@ -4,11 +4,7 @@ The `scr-be/teavee-html-generator-bundle` project is one of a [collection](https
 PHP libraries and Symfony bundles maintained by [Rob Frawley 2nd](https://scr.be/rmf) and 
 [collaborators](https://github.com/scr-be/teavee-html-generator-bundle/graphs/contributors), often for
 [Scribe Inc](https://scr.be/) under the direction of supporting their technology services with the intention
-of abstracting components that may prove useful to others.
-
-## Overview
-
-*This project provides a collection of classes, traits, and interfaces to simplify Symfony bundle operations, such as 
+of abstracting components that may prove useful to others. *This project provides a collection of classes, traits, and interfaces to simplify Symfony bundle operations, such as 
 configuring extensions and implementing compiler passes.*
 
 | CI Test Results | Code Review     | Test Coverage   |

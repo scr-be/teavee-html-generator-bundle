@@ -7,9 +7,9 @@ Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\IconFamily :
         row_format       : DYNAMIC
         charset          : utf8mb4
         collate          : utf8mb4_unicode_ci
-    table                : Teavee_Icon_Family
     changeTrackingPolicy : DEFERRED_EXPLICIT
     readOnly             : true
+    table                : Teavee_Icon_Family
     repositoryClass      : Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Repository\IconFamilyRepository
 
     id:
@@ -26,10 +26,6 @@ Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\IconFamily :
         name :
             type   : string
             length : 64
-
-        aliases :
-            type     : json_array
-            nullable : true
 
         version :
             type   : string
@@ -48,10 +44,6 @@ Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\IconFamily :
             nullable : true
 
         optionalClasses :
-            type     : json_array
-            nullable : true
-
-        attributes :
             type     : json_array
             nullable : true
 

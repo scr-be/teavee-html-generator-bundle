@@ -21,7 +21,7 @@ class IconTemplate extends SlugEntity
     /**
      * @var string
      */
-    protected $name;
+    const VERSION = '0.1.0';
 
     /**
      * @var string
@@ -29,19 +29,9 @@ class IconTemplate extends SlugEntity
     protected $description;
 
     /**
-     * @var array
-     */
-    protected $variables;
-
-    /**
      * @var int
      */
     protected $priority;
-
-    /**
-     * @var string
-     */
-    protected $engine;
 
     /**
      * @var string
@@ -54,16 +44,6 @@ class IconTemplate extends SlugEntity
     protected $family;
 
     /**
-     * Support for casting from object type to string type.
-     *
-     * @return string
-     */
-    public function __toString()
-    {
-        return (string) $this->getIdentity();
-    }
-
-    /**
      * @return $this
      */
     public function initializeVariables()
@@ -74,23 +54,11 @@ class IconTemplate extends SlugEntity
     }
 
     /**
-     * @param string|null $name the name string
-     *
-     * @return $this
+     * @return string
      */
-    public function setName($name = null)
+    public function __toString()
     {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->name;
+        return $this->hasIdentity() ? $this->getIdentity() : spl_object_hash($this);
     }
 
     /**
@@ -131,46 +99,6 @@ class IconTemplate extends SlugEntity
     public function getPriority()
     {
         return $this->priority;
-    }
-
-    /**
-     * @param array
-     *
-     * @return $this
-     */
-    public function setVariables($variables = null)
-    {
-        $this->variables = $variables;
-
-        return $this;
-    }
-
-    /**
-     * @return array
-     */
-    public function getVariables()
-    {
-        return $this->variables;
-    }
-
-    /**
-     * @param string
-     *
-     * @return $this
-     */
-    public function setEngine($engine = null)
-    {
-        $this->engine = $engine;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEngine()
-    {
-        return $this->engine;
     }
 
     /**

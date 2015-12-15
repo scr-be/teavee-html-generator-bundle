@@ -7,9 +7,9 @@ Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\Icon :
         row_format       : DYNAMIC
         charset          : utf8mb4
         collate          : utf8mb4_unicode_ci
-    table                : Teavee_Icon
     changeTrackingPolicy : DEFERRED_EXPLICIT
     readOnly             : true
+    table                : Teavee_Icon
     repositoryClass      : Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Repository\IconRepository
 
     id :
@@ -20,6 +20,11 @@ Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\Icon :
             length : 64
             generator :
                 strategy : NONE
+
+    uniqueConstraints :
+
+        uniqueIconSlugAndFamily :
+            columns: [ slug, name ]
 
     indexes :
 
@@ -46,10 +51,6 @@ Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\Icon :
             nullable : true
 
         categories :
-            type     : json_array
-            nullable : true
-
-        attributes :
             type     : json_array
             nullable : true
 

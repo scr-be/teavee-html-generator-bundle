@@ -22,12 +22,12 @@ class IconFamily extends SlugEntity
     /**
      * @var string
      */
-    protected $name;
+    const VERSION = '0.1.0';
 
     /**
-     * @var array
+     * @var string
      */
-    protected $aliases;
+    protected $name;
 
     /**
      * @var string
@@ -55,11 +55,6 @@ class IconFamily extends SlugEntity
     protected $optionalClasses;
 
     /**
-     * @var array
-     */
-    protected $attributes;
-
-    /**
      * @var Icon[]
      */
     protected $icons;
@@ -68,14 +63,6 @@ class IconFamily extends SlugEntity
      * @var IconTemplate[]
      */
     protected $templates;
-
-    /**
-     * @return string
-     */
-    public function __toString()
-    {
-        return (string) $this->getIdentity();
-    }
 
     /**
      * @return $this
@@ -138,6 +125,14 @@ class IconFamily extends SlugEntity
     }
 
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->hasIdentity() ? $this->getIdentity() : spl_object_hash($this);
+    }
+
+    /**
      * @param string|null $name the name string
      *
      * @return $this
@@ -158,26 +153,6 @@ class IconFamily extends SlugEntity
     }
 
     /**
-     * @param array|null $aliases
-     *
-     * @return $this
-     */
-    public function setAliases(array $aliases = null)
-    {
-        $this->aliases = $aliases;
-
-        return $this;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getAliases()
-    {
-        return $this->aliases;
-    }
-
-    /**
      * @param string|null $version the version integer value
      *
      * @return $this
@@ -195,26 +170,6 @@ class IconFamily extends SlugEntity
     public function getVersion()
     {
         return $this->version;
-    }
-
-    /**
-     * @param array|null $attributes array of attributes
-     *
-     * @return $this
-     */
-    public function setAttributes(array $attributes = null)
-    {
-        $this->attributes = $attributes;
-
-        return $this;
-    }
-
-    /**
-     * @return array|null
-     */
-    public function getAttributes()
-    {
-        return $this->attributes;
     }
 
     /**

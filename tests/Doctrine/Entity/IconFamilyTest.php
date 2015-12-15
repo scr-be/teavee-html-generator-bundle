@@ -33,9 +33,6 @@ class IconFamilyTest extends WonkaTestCase
             'name' => [null,
                 ['d', 'e', 'f']
             ],
-            'aliases' => [[],
-                [[0, 1, 2], ['g', 'h', 'i'], ['j', 'k', 'l']]
-            ],
             'version' => [null,
                 [3, 4, 5]
             ],
@@ -49,9 +46,6 @@ class IconFamilyTest extends WonkaTestCase
                 [['m', 'n', 'o'], ['p', 'q', 'r'], ['s', 't', 'u']]
             ],
             'optionalClasses' => [[],
-                [['v', 'w', 'x'], ['y', 'q', 'aa'], ['bb', 'cc', 'dd']]
-            ],
-            'attributes' => [[],
                 [['v', 'w', 'x'], ['y', 'q', 'aa'], ['bb', 'cc', 'dd']]
             ],
             'icons' => [null,

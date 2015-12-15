@@ -1,18 +1,18 @@
 # Teavee HTML Generator Bundle
 
+| CI Test Results | Code Review     | Test Coverage   |
+|:---------------:|:---------------:|:---------------:|
+| [![Travis](https://scr.be/teavee-html-generator-bundle/travis_shield)](https://scr.be/teavee-html-generator-bundle/travis) | [![Codacy](https://scr.be/teavee-html-generator-bundle/codacy_shield)](https://scr.be/teavee-html-generator-bundle/codacy) | [![Coveralls](https://scr.be/teavee-html-generator-bundle/coveralls_shield)](https://scr.be/teavee-html-generator-bundle/coveralls) |
+
+## Overview
+
 The `scr-be/teavee-html-generator-bundle` project is one of a [collection](https://src.run) of open-source,
 PHP libraries and Symfony bundles maintained by [Rob Frawley 2nd](https://scr.be/rmf) and 
 [collaborators](https://github.com/scr-be/teavee-html-generator-bundle/graphs/contributors), often for
 [Scribe Inc](https://scr.be/) under the direction of supporting their technology services.
 
-**This project provides a collection of classes, traits, and interfaces to simplify Symfony bundle operations, such as 
-configuring extensions and implementing compiler passes.**
-
----
-
-| CI Test Results | Code Review     | Test Coverage   |
-|:---------------:|:---------------:|:---------------:|
-| [![Travis](https://scr.be/teavee-html-generator-bundle/travis_shield)](https://scr.be/teavee-html-generator-bundle/travis) | [![Codacy](https://scr.be/teavee-html-generator-bundle/codacy_shield)](https://scr.be/teavee-html-generator-bundle/codacy) | [![Coveralls](https://scr.be/teavee-html-generator-bundle/coveralls_shield)](https://scr.be/teavee-html-generator-bundle/coveralls) |
+This project provides a collection of classes, traits, and interfaces to simplify Symfony bundle operations, such as 
+configuring extensions and implementing compiler passes.
 
 ## Getting Started
 
@@ -22,21 +22,7 @@ Include this package within your project using [Composer](https://getcomposer.co
 composer require scr-be/teavee-html-generator-bundle
 ```
 
-The bundle must then be registered with your `app/AppKernel.php`--or equivalent Symfony-API-compatible kernel.
-
-```php
-class AppKernel extends \Symfony\Component\HttpKernel\Kernel
-{
-    public function registerBundles()
-    {
-        $bundles = [
-            new Scribe\Teavee\HtmlGeneratorBundle\ScribeTeaveeHtmlGeneratorBundle(),
-        ];
-
-        return $bundles;
-    }
-}
-```
+The bundle must then be registered with your `app/AppKernel.php` or equivalent, Symfony-API-compatible kernel.
 
 ## API
 
@@ -53,7 +39,7 @@ free software license.
 Review the [LICENSE.md](https://github.com/scr-be/teavee-html-generator-bundle/blob/master/LICENSE.md) file distributed 
 with this source code for all rights, restrictions, requirements, and other relivant information.
 
-## Resources
+# Resources
 
 | Purpose | Status |
 |:-------:|:------:|

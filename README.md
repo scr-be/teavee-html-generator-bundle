@@ -13,15 +13,9 @@ PHP libraries and Symfony bundles maintained by [Rob Frawley 2nd](https://scr.be
 
 This project provides a framework for creating HTML components-buttons, icons, etc, with support for API-based calls or twig extensions.
 
-## Getting Started
+## Install
 
 Include this package within your project using [Composer](https://getcomposer.com).
-
-```bash
-composer require scr-be/teavee-html-generator-bundle
-```
-
-The bundle must then be registered with your `app/AppKernel.php` or equivalent, Symfony-API-compatible kernel.
 
 ## API
 

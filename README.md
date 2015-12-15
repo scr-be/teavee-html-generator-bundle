@@ -11,8 +11,7 @@ PHP libraries and Symfony bundles maintained by [Rob Frawley 2nd](https://scr.be
 [collaborators](https://github.com/scr-be/teavee-html-generator-bundle/graphs/contributors), often for
 [Scribe Inc](https://scr.be/) under the direction of supporting their technology services.
 
-This project provides a collection of classes, traits, and interfaces to simplify Symfony bundle operations, such as 
-configuring extensions and implementing compiler passes.
+This project provides a framework for creating HTML components-buttons, icons, etc, with support for API-based calls or twig extensions.
 
 ## Getting Started
 

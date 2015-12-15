@@ -28,20 +28,11 @@ class IconTemplateTest extends WonkaTestCase
             'slug' => [null,
                 ['a', 'b', 'c']
             ],
-            'name' => [null,
-                ['d', 'e', 'f']
-            ],
             'description' => [null,
                 ['ee', 'ff', 'gg']
             ],
-            'variables' => [[],
-                [['m', 'n', 'o'], ['p', 'q', 'r'], ['s', 't', 'u']]
-            ],
             'priority' => [null,
                 [3, 4, 5]
-            ],
-            'engine' => [null,
-                ['d', 'e', 'f']
             ],
             'template' => [null,
                 ['d', 'e', 'f']

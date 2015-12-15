@@ -21,7 +21,7 @@ class Icon extends SlugEntity
     /**
      * @var string
      */
-    protected $slug;
+    const VERSION = '0.1.0';
 
     /**
      * @var string
@@ -39,11 +39,6 @@ class Icon extends SlugEntity
     protected $categories;
 
     /**
-     * @var array
-     */
-    protected $attributes;
-
-    /**
      * @var string
      */
     protected $description;
@@ -57,14 +52,6 @@ class Icon extends SlugEntity
      * @var IconFamily
      */
     protected $family;
-
-    /**
-     * @return string
-     */
-    public function __toString()
-    {
-        return (string) $this->getIdentity();
-    }
 
     /**
      * @return $this
@@ -87,13 +74,11 @@ class Icon extends SlugEntity
     }
 
     /**
-     * @return $this
+     * @return string
      */
-    public function initializeAttributes()
+    public function __toString()
     {
-        $this->attributes = [];
-
-        return $this;
+        return $this->hasIdentity() ? $this->getIdentity() : spl_object_hash($this);
     }
 
     /**
@@ -154,26 +139,6 @@ class Icon extends SlugEntity
     public function getCategories()
     {
         return $this->categories;
-    }
-
-    /**
-     * @param array|null $attributes array of attributes
-     *
-     * @return $this
-     */
-    public function setAttributes(array $attributes = null)
-    {
-        $this->attributes = $attributes;
-
-        return $this;
-    }
-
-    /**
-     * @return array|null
-     */
-    public function getAttributes()
-    {
-        return $this->attributes;
     }
 
     /**

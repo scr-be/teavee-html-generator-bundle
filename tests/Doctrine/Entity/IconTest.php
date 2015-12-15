@@ -37,9 +37,6 @@ class IconTest extends WonkaTestCase
             'categories' => [[],
                 [['m', 'n', 'o'], ['p', 'q', 'r'], ['s', 't', 'u']]
             ],
-            'attributes' => [[],
-                [['v', 'w', 'x'], ['y', 'q', 'aa'], ['bb', 'cc', 'dd']]
-            ],
             'description' => [null,
                 ['ee', 'ff', 'gg']
             ],

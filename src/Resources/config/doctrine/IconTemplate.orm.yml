@@ -7,9 +7,9 @@ Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\IconTemplate :
         row_format       : DYNAMIC
         charset          : utf8mb4
         collate          : utf8mb4_unicode_ci
-    table                : Teavee_Icon_Template
     changeTrackingPolicy : DEFERRED_EXPLICIT
     readOnly             : true
+    table                : Teavee_Icon_Template
     repositoryClass      : Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Repository\IconTemplateRepository
 
     id:
@@ -31,10 +31,6 @@ Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\IconTemplate :
         description :
             type    : string
             length  : 256
-
-        engine:
-            type   : string
-            length : 16
 
         template :
             type : text

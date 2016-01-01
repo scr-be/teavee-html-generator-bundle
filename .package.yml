@@ -11,3 +11,6 @@ php_exts : igbinary,memcached,yaml
 app_prep : dep-composer,db-create,db-load
 app_post : db-unload
 app_path : bin/teavee-html-component-generator
+pkg_name : teavee-html-generator-bundle
+pkg_desc : "a framework for creating HTML component generators by implementing:\n\n- An abstract "provider" for defining data retrieval logic\n- An abstract "generator" for defining rendering logic\n- An abstract "manager" for interfacing between the above components, handling the optional caching operations, and providing a simple user-facing API\n- Twig extension registrar abstraction"
+pkg_bndl : true

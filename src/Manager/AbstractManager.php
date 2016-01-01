@@ -11,8 +11,8 @@
 
 namespace Scribe\Teavee\HtmlGeneratorBundle\Manager;
 
-use Scribe\CacheBundle\Component\Manager\CacheManagerInterface;
-use Scribe\CacheBundle\DependencyInjection\Aware\CacheManagerAwareTrait;
+use Scribe\Teavee\ObjectCacheBundle\Component\Manager\CacheManagerInterface;
+use Scribe\Teavee\ObjectCacheBundle\DependencyInjection\Aware\CacheManagerAwareTrait;
 use Scribe\Teavee\HtmlGeneratorBundle\Generator\GeneratorInterface;
 use Scribe\Teavee\HtmlGeneratorBundle\Provider\ProviderInterface;
 use Scribe\Wonka\Exception\RuntimeException;

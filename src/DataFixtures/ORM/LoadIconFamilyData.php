@@ -11,7 +11,7 @@
 
 namespace Scribe\Teavee\HtmlGeneratorBundle\DataFixtures\ORM;
 
-use Scribe\Doctrine\DataFixtures\YamlFixture;
+use Scribe\Arthur\DoctrineFixturesBundle\DataFixtures\YamlFixture;
 
 /**
  * Class LoadIconFamilyData.

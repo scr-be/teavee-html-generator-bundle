@@ -11,7 +11,7 @@
 
 namespace Scribe\Teavee\HtmlGeneratorBundle\Manager;
 
-use Scribe\CacheBundle\Component\Manager\CacheManagerInterface;
+use Scribe\Teavee\ObjectCacheBundle\Component\Manager\CacheManagerInterface;
 
 /**
  * Interface ManagerInterface.

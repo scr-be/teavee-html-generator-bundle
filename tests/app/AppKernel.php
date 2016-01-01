@@ -26,7 +26,8 @@ class AppKernel extends \Scribe\WonkaBundle\Component\HttpKernel\Kernel
             ->addBundle('\Symfony\Bundle\TwigBundle\TwigBundle')
             ->addBundle('\Doctrine\Bundle\DoctrineBundle\DoctrineBundle')
             ->addBundle('\Scribe\WonkaBundle\ScribeWonkaBundle')
-            ->addBundle('\Scribe\CacheBundle\ScribeCacheBundle')
+            ->addBundle('\Scribe\Arthur\DoctrineFixturesBundle\ScribeArthurDoctrineFixturesBundle')
+            ->addBundle('\Scribe\Teavee\ObjectCacheBundle\ScribeTeaveeObjectCacheBundle')
             ->addBundle('\Scribe\Teavee\HtmlGeneratorBundle\ScribeTeaveeHtmlGeneratorBundle')
             ->addBundle('\Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle', 'dev', 'test')
             ->addBundle('\Symfony\Bundle\DebugBundle\DebugBundle', 'dev', 'test');

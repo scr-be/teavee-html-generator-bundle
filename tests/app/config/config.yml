@@ -10,10 +10,11 @@
 #
 
 imports:
-    - { resource: ../../../config/testers/symfony/config/base.yml }
-    - { resource: ../../../config/testers/symfony/config/framework.yml }
-    - { resource: ../../../config/testers/symfony/config/security.yml }
-    - { resource: ../../../config/testers/symfony/config/doctrine.yml }
+    - { resource: ../../../.config/testers/symfony/config/base.yml }
+    - { resource: ../../../.config/testers/symfony/config/framework.yml }
+    - { resource: ../../../.config/testers/symfony/config/security.yml }
+    - { resource: ../../../.config/testers/symfony/config/doctrine.yml }
+    - { resource: ../../../.config/testers/symfony/config/cache.yml }
 
 doctrine :
     orm :
@@ -27,17 +28,9 @@ doctrine :
                 query_cache_driver    : array
                 result_cache_driver   : array
 
-scribe_cache :
-    method :
-        memcached :
-            options_list :
-                serializer : serializer_php
-            servers_list :
-                name :
-                    host   : 127.0.0.1
-                    port   : 11211
-                    weight : 0
-
 scribe_teavee_html_generator : ~
+
+scribe_arthur_doctrine_fixtures:
+    enabled : true
 
 ...

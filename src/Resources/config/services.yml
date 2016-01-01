@@ -91,7 +91,7 @@ services :
             - '@s.teavee_html_generator.icon_provider'
             - '@s.teavee_html_generator.icon_generator'
         calls :
-            - [ registerCacheManager, [ '@?s.cache', '%s.html_generator.cache.enabled%', '%s.html_generator.cache.ttl%' ] ]
+            - [ registerCacheManager, [ '@?s.cache', '%s.teavee_html_generator.cache.enabled%', '%s.teavee_html_generator.cache.ttl%' ] ]
 
     s.teavee_html_generator.icon_manager.twig_provided :
         class     : "%s.teavee_html_generator.icon_manager.class%"
@@ -99,7 +99,7 @@ services :
             - '@s.teavee_html_generator.icon_provider'
             - '@s.teavee_html_generator.icon_generator'
         calls :
-            - [ registerCacheManager, [ '@?s.cache', '%s.html_generator.cache.enabled%', '%s.html_generator.cache.ttl%' ] ]
+            - [ registerCacheManager, [ '@?s.cache', '%s.teavee_html_generator.cache.enabled%', '%s.teavee_html_generator.cache.ttl%' ] ]
             - [ registerTwigEnvironment, [ '@twig' ] ]
 
     s.teavee_html_generator.icon_generator :
@@ -131,8 +131,8 @@ services :
 #            - '@s.teavee_html_generator.button_provider'
 #            - '@s.teavee_html_generator.button_generator'
 #            - '@?s.cache'
-#            - '%s.html_generator.cache.enabled%'
-#            - '%s.html_generator.cache.ttl%'
+#            - '%s.teavee_html_generator.cache.enabled%'
+#            - '%s.teavee_html_generator.cache.ttl%'
 ##
 #    s.teavee_html_generator.button_manager.twig_provided :
 #        class     : "%s.teavee_html_generator.button_manager.class%"
@@ -140,8 +140,8 @@ services :
 #            - '@s.teavee_html_generator.button_provider'
 #            - '@s.teavee_html_generator.button_generator'
 #            - '@?s.cache'
-#            - '%s.html_generator.cache.enabled%'
-#            - '%s.html_generator.cache.ttl%'
+#            - '%s.teavee_html_generator.cache.enabled%'
+#            - '%s.teavee_html_generator.cache.ttl%'
 #        calls :
 #            - [setGeneratorEnvironment, [ '@twig' ]]
 ##

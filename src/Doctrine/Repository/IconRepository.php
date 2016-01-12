@@ -60,7 +60,7 @@ class IconRepository extends EntityRepository
             ->createQueryBuilder('i')
             ->where('i.name = :name')
             ->setParameters([
-                'name' => $icon,
+                'name'   => $icon,
                 'family' => $family,
             ])
             ->leftJoin('i.family', 'family')

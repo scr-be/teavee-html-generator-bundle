@@ -60,7 +60,7 @@ class IconProvider implements ProviderInterface
         $results[] = $this->newSubjectEntry($subject, null, false);
         $results[] = $this->newSubjectEntry($subject);
 
-        foreach (['_', '-', ':'] as $separator) {
+        foreach ([':', '_', '-'] as $separator) {
             if (false === ($position = strpos($subject, $separator))) {
                 continue;
             }
@@ -68,6 +68,19 @@ class IconProvider implements ProviderInterface
             $results[] = $this->newSubjectEntry(
                 substr($subject, $position + 1),
                 substr($subject, 0, $position)
+            );
+
+            $results[] = $this->newSubjectEntry(
+                substr($subject, $position + 1),
+                substr($subject, 0, $position),
+                false
+            );
+
+            $results[] = $this->newSubjectEntry(
+                substr($subject, $position + 1),
+                substr($subject, 0, $position),
+                true,
+                '_'
             );
         }
 
@@ -78,25 +91,27 @@ class IconProvider implements ProviderInterface
      * @param string      $icon
      * @param string|null $family
      * @param bool|true   $canonical
+     * @param string      $replacement
      *
      * @return string[]
      */
-    protected function newSubjectEntry($icon, $family = null, $canonical = true)
+    protected function newSubjectEntry($icon, $family = null, $canonical = true, $replacement = '-')
     {
         return [
-            $canonical ? $this->canonicalizedSubject($icon)   : $icon,
-            $canonical ? $this->canonicalizedSubject($family) : $family,
+            $canonical ? $this->canonicalizedSubject($icon, $replacement)   : $icon,
+            $canonical ? $this->canonicalizedSubject($family, $replacement) : $family,
         ];
     }
 
     /**
      * @param string $subject
+     * @param string $replacement
      *
      * @return string|null
      */
-    protected function canonicalizedSubject($subject)
+    protected function canonicalizedSubject($subject, $replacement)
     {
-        return preg_replace('{[^a-z0-9-]}i', '-', $subject) ?: null;
+        return preg_replace('{[^a-z0-9]}i', $replacement, $subject) ?: null;
     }
 
     /**

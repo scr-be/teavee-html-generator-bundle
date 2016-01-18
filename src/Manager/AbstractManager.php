@@ -72,7 +72,7 @@ abstract class AbstractManager implements ManagerInterface
         if (null === ($response = $this->getCacheResponse($subject, $ops))) {
             try {
                 $provided = (array) $this->provider->find($ops, $subject);
-                $response = (string) $this->generator->make($ops, ...$provided);
+                $response = (string) $this->generator->make($ops, $subject, ...$provided);
             } catch (\Exception $e) {
                 return $this->renderError($e);
             }

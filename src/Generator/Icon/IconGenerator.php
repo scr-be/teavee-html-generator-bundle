@@ -67,12 +67,13 @@ class IconGenerator extends AbstractTwigGenerator implements GeneratorInterface
     ];
 
     /**
-     * @param mixed[]   $ops
-     * @param mixed,... $use
+     * @param mixed[]    $ops
+     * @param mixed|null $subject
+     * @param mixed,...  $use
      *
      * @return string
      */
-    public function make(array $ops = [], ...$use)
+    public function make(array $ops = [], $subject = null, ...$use)
     {
         $this->resetState();
 

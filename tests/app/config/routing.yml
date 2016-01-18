@@ -9,4 +9,16 @@
 # file that was distributed with this source code.
 #
 
+teavee_html_generator_test_path_1:
+    path:     /teavee/html/generator/test/path/1/{a}/{b}
+    defaults: { _controller: s.digitalhub.public.controller:nodeAction, b: null }
+
+teavee_html_generator_test_path_2:
+    path:     /teavee/html/generator/test/path/2
+    defaults: { _controller: s.digitalhub.public.controller:nodeAction, b: null }
+
+teavee_html_generator_test_path_3:
+    path:     /teavee/html/generator/test/path/3/{a}
+    defaults: { _controller: s.digitalhub.public.controller:nodeAction, a: null }
+
 ...

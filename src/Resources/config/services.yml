@@ -69,13 +69,13 @@ services :
 
     # Button Generator Entities/Repositories
 
-#    s.teavee_html_generator.button.repo :
-#        class     : "%s.teavee_html_generator.button.repo.class%"
-#        arguments :
-#            - "%s.teavee_html_generator.button.entity.class%"
-#        factory :
-#            - '@doctrine'
-#            - getRepository
+    s.teavee_html_generator.button.repo :
+        class     : "%s.teavee_html_generator.button.repo.class%"
+        arguments :
+            - "%s.teavee_html_generator.button.entity.class%"
+        factory :
+            - '@doctrine'
+            - getRepository
 
     # Icon Generator Services
 
@@ -103,7 +103,7 @@ services :
             - [ registerTwigEnvironment, [ '@twig' ] ]
 
     s.teavee_html_generator.icon_generator :
-        class     : "%s.teavee_html_generator.icon_generator.class%"
+        class : "%s.teavee_html_generator.icon_generator.class%"
 
     s.teavee_html_generator.icon_provider :
         class     : "%s.teavee_html_generator.icon_provider.class%"
@@ -119,40 +119,37 @@ services :
 
     # Button Generator Services
 
-#    s.teavee.button :
-#        alias : s.teavee_html_generator.button
-##
-#    s.teavee_html_generator.button :
-#        alias : s.teavee_html_generator.button_manager.twig_provided
-##
-#    s.teavee_html_generator.button_manager.twig_withheld :
-#        class     : "%s.teavee_html_generator.button_manager.class%"
-#        arguments :
-#            - '@s.teavee_html_generator.button_provider'
-#            - '@s.teavee_html_generator.button_generator'
-#            - '@?s.cache'
-#            - '%s.teavee_html_generator.cache.enabled%'
-#            - '%s.teavee_html_generator.cache.ttl%'
-##
-#    s.teavee_html_generator.button_manager.twig_provided :
-#        class     : "%s.teavee_html_generator.button_manager.class%"
-#        arguments :
-#            - '@s.teavee_html_generator.button_provider'
-#            - '@s.teavee_html_generator.button_generator'
-#            - '@?s.cache'
-#            - '%s.teavee_html_generator.cache.enabled%'
-#            - '%s.teavee_html_generator.cache.ttl%'
-#        calls :
-#            - [setGeneratorEnvironment, [ '@twig' ]]
-##
-#    s.teavee_html_generator.button_generator :
-#        class     : "%s.teavee_html_generator.button_generator.class%"
-##
-#    s.teavee_html_generator.button_provider :
-#        class     : "%s.teavee_html_generator.button_provider.class%"
-#        arguments :
-#            - '@s.teavee_html_generator.button.repo'
-##
+    s.teavee.button :
+        alias : s.teavee_html_generator.button
+
+    s.teavee_html_generator.button :
+        alias : s.teavee_html_generator.button_manager.twig_provided
+
+    s.teavee_html_generator.button_manager.twig_withheld :
+        class     : "%s.teavee_html_generator.button_manager.class%"
+        arguments :
+            - '@s.teavee_html_generator.button_provider'
+            - '@s.teavee_html_generator.button_generator'
+        calls :
+            - [ registerCacheManager, [ '@?s.cache', '%s.teavee_html_generator.cache.enabled%', '%s.teavee_html_generator.cache.ttl%' ] ]
+
+    s.teavee_html_generator.button_manager.twig_provided :
+        class     : "%s.teavee_html_generator.button_manager.class%"
+        arguments :
+            - '@s.teavee_html_generator.button_provider'
+            - '@s.teavee_html_generator.button_generator'
+        calls :
+            - [ registerCacheManager, [ '@?s.cache', '%s.teavee_html_generator.cache.enabled%', '%s.teavee_html_generator.cache.ttl%' ] ]
+            - [ registerTwigEnvironment, [ '@twig' ] ]
+
+    s.teavee_html_generator.button_generator :
+        class : "%s.teavee_html_generator.button_generator.class%"
+
+    s.teavee_html_generator.button_provider :
+        class     : "%s.teavee_html_generator.button_provider.class%"
+        arguments :
+            - '@s.teavee_html_generator.button.repo'
+
 #    s.teavee_html_generator.button_extension :
 #        class     : "%s.teavee_html_generator.button_extension.class%"
 #        arguments :

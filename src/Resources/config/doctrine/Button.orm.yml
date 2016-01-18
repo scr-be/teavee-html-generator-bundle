@@ -1,0 +1,33 @@
+---
+
+Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Entity\Button :
+
+    type                 : entity
+    options              :
+        row_format       : DYNAMIC
+        charset          : utf8mb4
+        collate          : utf8mb4_unicode_ci
+    changeTrackingPolicy : DEFERRED_EXPLICIT
+    readOnly             : true
+    table                : Teavee_Button
+    repositoryClass      : Scribe\Teavee\HtmlGeneratorBundle\Doctrine\Repository\ButtonRepository
+
+    id :
+
+        slug :
+            id     : true
+            type   : string
+            length : 64
+            generator :
+                strategy : NONE
+
+    fields :
+
+        description :
+            type    : string
+            length  : 256
+
+        template :
+            type : text
+
+...

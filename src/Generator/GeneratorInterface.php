@@ -17,12 +17,13 @@ namespace Scribe\Teavee\HtmlGeneratorBundle\Generator;
 interface GeneratorInterface
 {
     /**
-     * @param mixed[]   $ops
-     * @param mixed,... $use
+     * @param mixed[]    $ops
+     * @param mixed|null $subject
+     * @param mixed,...  $use
      *
      * @return string
      */
-    public function make(array $ops = [], ...$use);
+    public function make(array $ops = [], $subject = null, ...$use);
 
     /**
      * @param \Twig_Environment|null $engineEnvironment

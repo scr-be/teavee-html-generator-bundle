@@ -70,6 +70,19 @@ abstract class AbstractTwigExtension extends BaseAbstractTwigExtension
 
         return $this;
     }
+
+    /**
+     * @param mixed $what
+     * @param array $opts
+     *
+     * @return mixed
+     */
+    protected function render($what, array $opts = [])
+    {
+        return $this
+            ->getManager()
+            ->render($what, $opts);
+    }
 }
 
 /* EOF */

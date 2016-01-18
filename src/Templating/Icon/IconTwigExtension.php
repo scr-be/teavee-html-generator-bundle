@@ -31,17 +31,16 @@ class IconTwigExtension extends AbstractTwigExtension
 
     /**
      * @param \Twig_Environment $environment
-     * @param string            $search
+     * @param string            $what
      * @param array[]           $ops
      *
      * @return string
      */
-    public function renderIcon(\Twig_Environment $environment, $search, array $ops = [])
+    public function renderIcon(\Twig_Environment $environment, $what, array $ops = [])
     {
         return (string) $this
             ->registerTwigEnvironment($environment)
-            ->getManager()
-            ->render($search, $ops);
+            ->render($what, $ops);
     }
 }
 

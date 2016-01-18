@@ -17,7 +17,6 @@ use Scribe\Teavee\HtmlGeneratorBundle\Provider\ProviderInterface;
 use Scribe\Teavee\HtmlGeneratorBundle\Manager\Icon\IconManager;
 use Scribe\Teavee\HtmlGeneratorBundle\Generator\Icon\IconGenerator;
 use Scribe\Teavee\HtmlGeneratorBundle\Provider\Icon\IconDoctrineProvider;
-use Scribe\CacheBundle\Component\Manager\CacheManager;
 use Scribe\WonkaBundle\Utility\TestCase\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

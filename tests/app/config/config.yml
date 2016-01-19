@@ -28,7 +28,8 @@ doctrine :
                 query_cache_driver    : array
                 result_cache_driver   : array
 
-scribe_teavee_html_generator : ~
+scribe_teavee_html_generator :
+    enabled : true
 
 scribe_arthur_doctrine_fixtures:
     enabled : true

@@ -16,7 +16,7 @@ use Scribe\Teavee\HtmlGeneratorBundle\Manager\ManagerInterface;
 use Scribe\Teavee\HtmlGeneratorBundle\Provider\ProviderInterface;
 use Scribe\Teavee\HtmlGeneratorBundle\Manager\Icon\IconManager;
 use Scribe\Teavee\HtmlGeneratorBundle\Generator\Icon\IconGenerator;
-use Scribe\Teavee\HtmlGeneratorBundle\Provider\Icon\IconDoctrineProvider;
+use Scribe\Teavee\HtmlGeneratorBundle\Provider\Icon\IconProvider;
 use Scribe\WonkaBundle\Utility\TestCase\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -42,7 +42,7 @@ class IconManagerTest extends KernelTestCase
     }
 
     /**
-     * @return IconDoctrineProvider
+     * @return IconProvider
      */
     protected function getProvider()
     {

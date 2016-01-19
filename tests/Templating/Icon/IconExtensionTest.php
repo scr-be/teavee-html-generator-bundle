@@ -11,7 +11,7 @@
 
 namespace Scribe\Teavee\HtmlGeneratorBundle\Tests\Templating\Icon;
 
-use Scribe\Teavee\HtmlGeneratorBundle\Templating\Icon\IconExtension;
+use Scribe\Teavee\HtmlGeneratorBundle\Templating\Icon\IconTwigExtension;
 use Scribe\WonkaBundle\Utility\TestCase\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -21,7 +21,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class IconExtensionTest extends KernelTestCase
 {
     /**
-     * @return IconExtension
+     * @return IconTwigExtension
      */
     protected function getIconExtension()
     {

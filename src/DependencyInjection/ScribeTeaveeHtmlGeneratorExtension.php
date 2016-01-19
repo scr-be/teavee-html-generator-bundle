@@ -11,12 +11,12 @@
 
 namespace Scribe\Teavee\HtmlGeneratorBundle\DependencyInjection;
 
-use Scribe\WonkaBundle\Component\DependencyInjection\AbstractExtension;
+use Scribe\WonkaBundle\Component\DependencyInjection\AbstractEnableableExtension;
 
 /**
  * Class ScribeTeaveeHtmlGeneratorExtension.
  */
-class ScribeTeaveeHtmlGeneratorExtension extends AbstractExtension
+class ScribeTeaveeHtmlGeneratorExtension extends AbstractEnableableExtension
 {
 }
 

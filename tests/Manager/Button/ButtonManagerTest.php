@@ -121,8 +121,8 @@ EOF;
     {
         $m = $this->getButtonGenerator();
         $expected =
-            <<<EOF
-            <a class="btn  " href="/teavee/html/generator/test/path/3">
+<<<EOF
+<a class="btn  " href="/teavee/html/generator/test/path/3">
         Button Test
 </a>
 EOF;
@@ -137,8 +137,8 @@ EOF;
     {
         $m = $this->getButtonGenerator();
         $expected =
-            <<<EOF
-            <a class="btn  " href="/teavee/html/generator/test/path/3/an-argument">
+<<<EOF
+<a class="btn  " href="/teavee/html/generator/test/path/3/an-argument">
         Button Test
 </a>
 EOF;
@@ -155,7 +155,7 @@ EOF;
     {
         $m = $this->getButtonGenerator();
         $expected =
-            <<<EOF
+<<<EOF
 <a class="btn  " href="#">
         Button Test
 </a>

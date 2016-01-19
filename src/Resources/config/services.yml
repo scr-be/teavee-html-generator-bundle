@@ -150,11 +150,11 @@ services :
         arguments :
             - '@s.teavee_html_generator.button.repo'
 
-#    s.teavee_html_generator.button_extension :
-#        class     : "%s.teavee_html_generator.button_extension.class%"
-#        arguments :
-#            - '@s.teavee_html_generator.button_manager.twig_withheld'
-#        tags :
-#            - { name : twig.extension }
+    s.teavee_html_generator.button_extension :
+        class     : "%s.teavee_html_generator.button_extension.class%"
+        arguments :
+            - '@s.teavee_html_generator.button_manager.twig_withheld'
+        tags :
+            - { name : twig.extension }
 
 ...

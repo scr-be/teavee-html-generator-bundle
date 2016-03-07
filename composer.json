@@ -24,7 +24,7 @@
     "require" : {
         "php"                                    : ">=5.6.4,~5.6|~7.0",
         "scr-be/wonka-bundle"                    : "~0.5",
-        "scr-be/arthur-doctrine-fixtures-bundle" : "~0.5",
+        "scr-be/arthur-doctrine-fixtures-bundle" : "~0.6",
         "scr-be/teavee-object-cache-bundle"      : "~2.4",
         "symfony/config"                         : "~2.8|~3.0",
         "symfony/dependency-injection"           : "~2.8|~3.0",

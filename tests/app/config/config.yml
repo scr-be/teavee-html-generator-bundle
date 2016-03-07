@@ -34,4 +34,10 @@ scribe_teavee_html_generator :
 scribe_arthur_doctrine_fixtures:
     enabled : true
 
+scribe_teavee_object_cache :
+    attendant :
+        memcached :
+            general :
+                enabled : true
+
 ...

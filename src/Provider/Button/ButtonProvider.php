@@ -83,7 +83,7 @@ class ButtonProvider implements ProviderInterface
             return $result;
         }
 
-        throw new RuntimeException('Search for button "%s" failed.', null, null, $search);
+        throw new RuntimeException('Search for button "%s" failed.', $search);
     }
 
     /**

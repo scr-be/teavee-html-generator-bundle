@@ -22,17 +22,15 @@
         }
     ],
     "require" : {
-        "php"                                     : ">=5.6.4,~5.6|~7.0",
-        "scr-be/wonka-library"                    : "~0.3",
-        "scr-be/wonka-bundle"                     : "~0.3",
-        "scr-be/teavee-object-cache-bundle"       : "~2.4",
-        "scr-be/arthur-doctrine-library"          : "~0.3",
-        "scr-be/arthur-doctrine-fixtures-bundle"  : "~0.4",
-        "symfony/config"                          : "~2.8|~3.0",
-        "symfony/dependency-injection"            : "~2.8|~3.0",
-        "symfony/http-foundation"                 : "~2.8|~3.0",
-        "symfony/twig-bundle"                     : "~2.8|~3.0",
-        "twig/twig"                               : "~1.23"
+        "php"                                    : ">=5.6.4,~5.6|~7.0",
+        "scr-be/wonka-bundle"                    : "~0.5",
+        "scr-be/arthur-doctrine-fixtures-bundle" : "~0.5",
+        "scr-be/teavee-object-cache-bundle"      : "~2.4",
+        "symfony/config"                         : "~2.8|~3.0",
+        "symfony/dependency-injection"           : "~2.8|~3.0",
+        "symfony/http-foundation"                : "~2.8|~3.0",
+        "symfony/twig-bundle"                    : "~2.8|~3.0",
+        "twig/twig"                              : "~1.23"
     },
     "require-dev" : {
         "doctrine/doctrine-fixtures-bundle" : "~2.2",

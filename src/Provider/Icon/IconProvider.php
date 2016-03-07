@@ -127,7 +127,7 @@ class IconProvider implements ProviderInterface
             }
         }
 
-        throw new RuntimeException('Search for icon "%s" failed.', null, null, implode(',', current($searches)));
+        throw new RuntimeException('Search for icon "%s" failed.', implode(',', current($searches)));
     }
 
     /**
